@@ -1,1 +1,30 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
+        format_sql: true
+  sql:
+    init:
+      mode: always
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/phonestore
+    username: root
+    password: root
 
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
+---
+spring:
+  config:
+    activate:
+      on-profile: ci, test
+  datasource:
+    url: jdbc:postgresql://localhost:5432/phonestore-test
+    username: test
+    password: test
