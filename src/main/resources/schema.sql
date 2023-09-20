@@ -7,5 +7,5 @@ CREATE TABLE IF NOT EXISTS phones
     color           VARCHAR(50) NOT NULL,
     os              VARCHAR(50) NOT NULL,
     processor_model VARCHAR(50) NOT NULL,
-    release_date    TIMESTAMP   NOT NULL
+    release_date    DATE        NOT NULL
 );

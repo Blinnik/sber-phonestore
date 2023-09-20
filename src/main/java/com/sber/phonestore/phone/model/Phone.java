@@ -8,7 +8,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "phones")
@@ -47,7 +47,7 @@ public class Phone {
     String processorModel;
 
     @Column(name = "release_date")
-    @NotNull(message = "releaseDate cannot be blank")
+    @NotNull(message = "releaseDate cannot be null")
     @Past(message = "releaseDate must be in the past")
-    LocalDateTime releaseDate;
+    LocalDate releaseDate;
 }
