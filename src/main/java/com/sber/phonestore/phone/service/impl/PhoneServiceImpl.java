@@ -10,11 +10,17 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ * Implementation of the PhoneService interface
+ *
+ * @see PhoneService
+ */
 @Service
 @RequiredArgsConstructor
 @Slf4j
 public class PhoneServiceImpl implements PhoneService {
 
+    /** Interface for interacting with the Phone entity at the DB level */
     private final PhoneRepository phoneRepository;
 
     @Override

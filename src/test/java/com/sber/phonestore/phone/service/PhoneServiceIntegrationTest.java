@@ -3,7 +3,6 @@ package com.sber.phonestore.phone.service;
 import com.sber.phonestore.exception.NotFoundException;
 import com.sber.phonestore.phone.model.Phone;
 import lombok.AccessLevel;
-import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -17,9 +16,13 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Integration tests for PhoneService using a test database to work
+ *
+ * @see PhoneService
+ */
 @Transactional
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
-@RequiredArgsConstructor(onConstructor_ = @Autowired)
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class PhoneServiceIntegrationTest {
 
@@ -35,6 +38,11 @@ public class PhoneServiceIntegrationTest {
             .releaseDate(LocalDate.of(2017, 7, 28));
 
     Phone phone;
+
+    @Autowired
+    public PhoneServiceIntegrationTest(PhoneService phoneService) {
+        this.phoneService = phoneService;
+    }
 
     @BeforeEach
     void setUp() {

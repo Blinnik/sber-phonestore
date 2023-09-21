@@ -25,6 +25,11 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+/**
+ * Unit tests for the PhoneController
+ *
+ * @see PhoneController
+ */
 @WebMvcTest(controllers = PhoneController.class)
 @FieldDefaults(level = AccessLevel.PRIVATE)
 class PhoneControllerTest {
