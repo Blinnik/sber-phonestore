@@ -26,7 +26,7 @@ import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 @FieldDefaults(level = AccessLevel.PRIVATE)
-class PhoneServiceTest {
+class PhoneServiceImplTest {
 
     @Mock
     PhoneRepository phoneRepository;
