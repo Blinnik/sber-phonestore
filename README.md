@@ -11,4 +11,4 @@
 * JavaDoc
 
 ## Комментарий
-JavaDoc был сгенерирован и находится в src/main/resources/docs.zip
+JavaDoc был сгенерирован и находится в [src/main/resources/docs.zip](src/main/resources/docs.zip)
